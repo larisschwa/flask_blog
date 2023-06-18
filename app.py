@@ -57,7 +57,7 @@ def save_post(post):
             break
 
     if location is not None:
-        blog_posts[index] = post
+        blog_posts[location] = post
 
         with open('posts.json', 'w') as file:
             json.dump(blog_posts, file, indent=4)
@@ -122,9 +122,9 @@ def update(post_id):
 
     if request.method == 'POST':
         # Update the post details based on the form data
-        post.author = request.form['author']
-        post.title = request.form['title']
-        post.content = request.form['content']
+        post['author'] = request.form['author']
+        post['title'] = request.form['title']
+        post['content'] = request.form['content']
 
         # Save the updated post back to the JSON file or database
         save_post(post)
