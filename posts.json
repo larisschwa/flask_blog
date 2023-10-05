@@ -1,7 +1,7 @@
 [
     {
         "id": 2,
-        "author": "Jane Doe",
+        "author": "Larissa",
         "title": "Second Post",
         "content": "sup"
     },
@@ -16,5 +16,11 @@
         "author": "Larissa",
         "title": "Hi",
         "content": "Hi"
+    },
+    {
+        "id": 2,
+        "author": "Larissa",
+        "title": "Anotha One",
+        "content": "Here's another blog post because why not?!"
     }
 ]

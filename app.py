@@ -121,17 +121,14 @@ def update(post_id):
         return "Post not found", 404
 
     if request.method == 'POST':
-        # Update the post details based on the form data
         post['author'] = request.form['author']
         post['title'] = request.form['title']
         post['content'] = request.form['content']
 
-        # Save the updated post back to the JSON file or database
         save_post(post)
 
         return redirect(url_for('index'))
 
-    # If it's a GET request, display the update form
     return render_template('update.html', post=post)
 
 
